@@ -76,9 +76,21 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - danielfoehrkn/switch
+  - derailed/k9s
+  - derailed/popeye
+  - fluxcd/tap
+  - homebrew/bundle
+  - homebrew/cask-drivers
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
+  - homebrew/services
+  - jaconi-io/tap
+  - snyk/tap
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - 1password
   - 1password-cli
   - alt-tab
   - autodesk-fusion360
