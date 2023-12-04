@@ -1,0 +1,192 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: false
+dockitems_remove: []
+# - Launchpad
+# - TV
+# - Podcasts
+# - 'App Store'
+dockitems_persist: []
+# - name: "Sublime Text"
+#   path: "/Applications/Sublime Text.app/"
+#   pos: 5
+
+configure_sudoers: false
+sudoers_custom_config: ''
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+#dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+#dotfiles_repo_accept_hostkey: true
+#dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+#dotfiles_files:
+#  - .zshrc
+#  - .gitignore
+#  - .inputrc
+#  - .osx
+#  - .vimrc
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - argocd
+  - aws-credential-1password
+  - awscli
+  - azure-cli
+  - bat
+  - cheat
+  - checkov
+  - chezmoi
+  - coreutils
+  - diff-so-fancy
+  - direnv
+  - exa
+  - flux
+  - flux-envsubst
+  - fzf
+  - gh
+  - git
+  - helm
+  - httpie
+  - ical-buddy
+  - infracost
+  - jq
+  - k3d
+  - k6
+  - k9s
+  - kind
+  - kubernetes-cli
+  - mas
+  - pre-commit
+  - starship
+  - switch
+  - switcher
+  - tldr
+  - wireshark
+  - zsh
+  - zsh-completions
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - 1password-cli
+  - alt-tab
+  - autodesk-fusion360
+  - bambu-studio
+  - bettertouchtool
+  - clockify
+  - dash
+  - discord
+  - docker
+  - drawio
+  - dropbox
+  - elgato-stream-deck
+  - fluor
+  - google-cloud-sdk
+  - google-drive
+  - home-assistant
+  - hyperkey
+#  - istat-menus
+  - jetbrains-toolbox
+#  - ksdiff
+#  - lens
+#  - logitech-camera-settings
+#  - logitech-g-hub
+#  - logitech-options
+
+#  - microsoft-teams
+  - notion
+#  - popsql
+  - raycast
+  - shureplus-motiv
+  - slack
+  - steam
+  - telegram
+  - tradingview
+  - tunnelblick
+  - visual-studio-code
+  - warp
+  - wireshark
+  - zoom
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps:
+  - 1635154215      #  WISO Steuer 2023      (30.11.4020)
+  - 904280696     #   Things                (3.19.3)
+  - 1472777122      #  PayPal Honey          (16.2.8)
+  - 1116599239      #  NordVPN IKE           (6.8.4)
+  - 1529448980      #  Reeder                (5.4)
+  - 497799835     #   Xcode                 (15.0.1)
+  - 634148309     #   Logic Pro             (10.8.1)
+  - 975937182     #   Fantastical           (3.8.7)
+  - 1569813296      #  1Password for Safari  (2.17.1)
+  - 1616831348      #  Affinity Designer 2   (2.3.0)
+  - 424389933     #   Final Cut Pro         (10.7)
+  - 450527929     #   djay Pro AI           (4.1.10)
+  - 1289583905      #  Pixelmator Pro        (3.4.3)
+  - 948660805     #   AusweisApp            (2.0.1)
+  - 434290957     #   Motion                (5.7)
+  - 409201541     #   Pages                 (13.2)
+  - 424390742     #   Compressor            (4.7)
+  - 405399194     #   Kindle Classic        (1.40.3)
+  - 1086818840      #  Rocket.Chat           (3.9.7)
+  - 409203825     #   Numbers               (13.2)
+  - 634159523     #   MainStage             (3.6.5)
+  - 409183694     #   Keynote               (13.2)
+  - 463362050     #   PhotoSweeper          (4.8.4)
+  - 963034692     #   Streaks               (9.4.11)
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+# Set to 'true' to configure Sublime Text.
+configure_sublime: false
+sublime_base_path: '~/Library/Application Support/Sublime Text'
+sublime_config_path: "Packages/User"
+sublime_package_control:
+  - "DocBlockr"
+  - "Dockerfile Syntax Highlighting"
+  - "FileDiffs"
+  - "GitHub Flavored Markdown Preview"
+  - "Jinja2"
+  - "Package Control"
+  - "PHP-Twig"
+  - "Pretty JSON"
+  - "SublimeLinter"
+  - "SublimeLinter-contrib-yamllint"
+  - "TrailingSpaces"
+  - "WordCount"
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
