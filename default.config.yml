@@ -81,7 +81,6 @@ homebrew_taps:
   - derailed/popeye
   - fluxcd/tap
   - homebrew/bundle
-  - homebrew/cask-drivers
   - homebrew/cask-fonts
   - homebrew/cask-versions
   - homebrew/services
@@ -93,7 +92,7 @@ homebrew_cask_apps:
   - 1password
   - 1password-cli
   - alt-tab
-  - autodesk-fusion360
+#  - autodesk-fusion360 # Manual install.
   - bambu-studio
   - bettertouchtool
   - clockify
