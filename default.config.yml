@@ -1,21 +1,60 @@
 ---
 downloads: ~/.ansible-downloads/
 
+configure_paths: true
+configure_zsh: true
 configure_dotfiles: false
 configure_terminal: false
 configure_osx: false
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: false
-dockitems_remove: []
-# - Launchpad
-# - TV
-# - Podcasts
-# - 'App Store'
-dockitems_persist: []
-# - name: "Sublime Text"
-#   path: "/Applications/Sublime Text.app/"
-#   pos: 5
+configure_dock: true
+dockitems_remove:
+  - Launchpad
+  - TV
+  - 'App Store'
+  - Photos
+  - Maps
+  - FaceTime
+  - Calendar
+  - Contacts
+  - Reminders
+  - Notes
+  - Freeform
+  - Music
+  - Keynote
+  - Numbers
+  - Pages
+  - Mail
+  - Messages
+
+dockitems_persist:
+  - name: Arc
+    path: "/Applications/Arc.app/"
+    pos: 2
+  - name: Spark Desktop
+    path: "/Applications/Spark Desktop.app/"
+    pos: 3
+  - name: Slack
+    path: "/Applications/Slack.app/"
+    pos: 4
+  - name: Fantastical
+    path: "/Applications/Fantastical.app/"
+    pos: 5
+  - name: Things
+    path: "/Applications/Things3.app/"
+    pos: 6
+  - name: Clockify Desktop
+    path: "/Applications/Clockify Desktop.app/"
+    pos: 7
+  - name: Notion
+    path: "/Applications/Notion.app/"
+    pos: 8
+  - name: Warp
+    path: "/Applications/Warp.app/"
+    pos: 9
+
+
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -37,6 +76,7 @@ sudoers_custom_config: ''
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - argocd
+  - asdf
   - aws-credential-1password
   - awscli
   - azure-cli
@@ -70,12 +110,14 @@ homebrew_installed_packages:
   - switcher
   - tldr
   - wireshark
+  - zoxide
   - zsh
   - zsh-completions
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - claui/public
   - danielfoehrkn/switch
   - derailed/k9s
   - derailed/popeye
@@ -93,6 +135,8 @@ homebrew_cask_apps:
   - 1password-cli
   - alt-tab
 #  - autodesk-fusion360 # Manual install.
+  - arc
+  - aws-vault
   - bambu-studio
   - bettertouchtool
   - clockify
@@ -107,18 +151,12 @@ homebrew_cask_apps:
   - google-drive
   - home-assistant
   - hyperkey
-#  - istat-menus
+  - istat-menus
   - jetbrains-toolbox
-#  - ksdiff
-#  - lens
-#  - logitech-camera-settings
-#  - logitech-g-hub
-#  - logitech-options
-
-#  - microsoft-teams
+  - microsoft-teams
   - notion
-#  - popsql
   - raycast
+  - readdle-spark
   - shureplus-motiv
   - slack
   - steam
@@ -131,31 +169,33 @@ homebrew_cask_apps:
   - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps:
+mas_installed_apps: []
+mas_installed_app_ids:
   - 1635154215      #  WISO Steuer 2023      (30.11.4020)
-  - 904280696     #   Things                (3.19.3)
+  - 904280696       #   Things                (3.19.3)
   - 1472777122      #  PayPal Honey          (16.2.8)
   - 1116599239      #  NordVPN IKE           (6.8.4)
   - 1529448980      #  Reeder                (5.4)
-  - 497799835     #   Xcode                 (15.0.1)
-  - 634148309     #   Logic Pro             (10.8.1)
-  - 975937182     #   Fantastical           (3.8.7)
+  - 497799835       #   Xcode                 (15.0.1)
+  - 634148309       #   Logic Pro             (10.8.1)
+  - 975937182       #   Fantastical           (3.8.7)
   - 1569813296      #  1Password for Safari  (2.17.1)
   - 1616831348      #  Affinity Designer 2   (2.3.0)
-  - 424389933     #   Final Cut Pro         (10.7)
-  - 450527929     #   djay Pro AI           (4.1.10)
+  - 424389933       #   Final Cut Pro         (10.7)
+  - 450527929       #   djay Pro AI           (4.1.10)
   - 1289583905      #  Pixelmator Pro        (3.4.3)
-  - 948660805     #   AusweisApp            (2.0.1)
-  - 434290957     #   Motion                (5.7)
-  - 409201541     #   Pages                 (13.2)
-  - 424390742     #   Compressor            (4.7)
-  - 405399194     #   Kindle Classic        (1.40.3)
+  - 948660805       #   AusweisApp            (2.0.1)
+  - 434290957       #   Motion                (5.7)
+  - 409201541       #   Pages                 (13.2)
+  - 424390742       #   Compressor            (4.7)
+  - 405399194       #   Kindle Classic        (1.40.3)
   - 1086818840      #  Rocket.Chat           (3.9.7)
-  - 409203825     #   Numbers               (13.2)
-  - 634159523     #   MainStage             (3.6.5)
-  - 409183694     #   Keynote               (13.2)
-  - 463362050     #   PhotoSweeper          (4.8.4)
-  - 963034692     #   Streaks               (9.4.11)
+  - 409203825       #   Numbers               (13.2)
+  - 634159523       #   MainStage             (3.6.5)
+  - 409183694       #   Keynote               (13.2)
+  - 463362050       #   PhotoSweeper          (4.8.4)
+  - 963034692       #   Streaks               (9.4.11)
+  - 1099568401      # Home Assistant
 mas_email: ""
 mas_password: ""
 

@@ -27,6 +27,14 @@
       tags: ['dock']
 
   tasks:
+    - import_tasks: tasks/paths.yml
+      when: configure_paths
+      tags: [ 'paths' ]
+
+    - import_tasks: tasks/zsh.yml
+      when: configure_zsh
+      tags: [ 'zsh' ]
+
     - import_tasks: tasks/sudoers.yml
       when: configure_sudoers
       tags: ['sudoers']
